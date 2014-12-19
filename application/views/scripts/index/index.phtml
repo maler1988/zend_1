@@ -1,0 +1,24 @@
+<?php
+$this->title = "Мои любимые фильмы";
+$this->headTitle($this->title);
+?>
+<p><a href="<?php echo $this->url(array('controller'=>'index','action'=>'add'));?>">Добавить новый фильм</a></p>
+<table class="movies-list" >
+    <tr>
+        <th>Название</th>
+        <th>Режиссёр</th>
+        <th>Действие</th>
+    </tr>
+    <?php
+    foreach ($this->movies as $mKey => $movie) { ?>
+    <tr>
+        <td><?php echo $movie["title"];?></td>
+        <td><?php echo $movie["director"];?></td>
+        <td>
+            <a href="<?php echo $this->url(array('controller'=>'index', 'action'=>'edit', 'id'=>$movie["id"]));?>">Редактировать</a>
+	    <a href="<?php echo $this->url(array('controller'=>'index', 'action'=>'delete', 'id'=>$movie["id"]));?>">Удалить</a>
+        </td>
+    </tr> 
+    <?php } ?>
+
+</table>

@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19.12.2014, 15:15:17
+    Author     : Manager
+*/
+
+body,html {
+    margin: 0 5px;
+    font-family: Verdana,sans-serif;
+}
+h1 {
+    font-size: 1.4em;
+    color: #000080;
+}
+a {
+    color: #000080;
+}
+
+/* Таблица */
+th {
+    text-align: left;
+}
+td, th {
+    padding-right: 5px;
+}
+
+/* Форма */
+form dt {
+    width: 100px;
+    display: block;
+    float: left;
+    clear: left;
+}
+form dd {
+    margin-left: 0;
+    float: left;
+}
+form #submitbutton {
+    margin-left: 100px;
+}
+
+.movies-list {
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+}
+
+.movies-list th, .movies-list td  {
+    border: 1px solid #CCC;
+    padding: 5px;
+}
+

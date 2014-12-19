@@ -1,0 +1,15 @@
+<?php
+    $this->title = "Удаление любимого фильма";
+    $this->headTitle($this->title);
+?>
+<p>Вы действительно хотите удалить фильм 
+    '<?php echo $this->escape($this->movie['title']); ?>' от
+    '<?php echo $this->escape($this->movie['director']); ?>'?
+</p>
+<form action="<?php echo $this->url(array('action'=>'delete')); ?>" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->movie['id']; ?>" />
+        <input type="submit" name="del" value="Да" />
+        <input type="submit" name="del" value="Нет" />
+    </div>
+</form>
