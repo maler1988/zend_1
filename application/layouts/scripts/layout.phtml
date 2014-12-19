@@ -19,6 +19,8 @@
         $url = $this->url(array('controller'=>'auth', 'action'=>'logout'));
         // если пользователь авторизирован, показываем ему кнопку "Выход"
         echo "<a href=\"{$url}\">Выход</a>";
+    } else { 
+        echo "<a href='".$this->url(array('controller'=>'auth', 'action'=>'login'))."' >Авторизация</a>";
     }
 ?>
     <div id="content">
