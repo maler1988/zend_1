@@ -58,7 +58,6 @@ class IndexController extends Zend_Controller_Action
         }
     }
 
-
     public function editAction()
     {
         // Создаём форму
@@ -108,7 +107,6 @@ class IndexController extends Zend_Controller_Action
         }
     }
 
-
     public function deleteAction()
     {
         // Если к нам идёт Post запрос
@@ -143,9 +141,19 @@ class IndexController extends Zend_Controller_Action
         }
     }
 
+    public function testAction()
+    {
+        // action body
+    }
 
+    public function test2Action()
+    {
+        // action body
+    }
 
 }
+
+
 
 
 
