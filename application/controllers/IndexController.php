@@ -2,6 +2,25 @@
 
 class IndexController extends Zend_Controller_Action
 {
+    /**
+     * @data - массив значений для помощника вида
+     */
+    public  $data = array(
+                array('Name', 'Email'),
+                array('Alison', 'alison@example.com'),
+                array('Bert', 'bert@example.com'),
+                array('Charlie', 'charlie@example.com')
+            );
+    
+    /**
+     *
+     * @attributes массив параметров таблицы помощника вида 
+     */
+    public  $attributes = array(
+                "class"=>"helpers_table", 
+                "width"=>"30%", 
+                "border"=>"1"
+            );
 
     public function init()
     {
@@ -14,7 +33,9 @@ class IndexController extends Zend_Controller_Action
           $movies = new Application_Model_DbTable_Movies();
           $moviesArray = $movies->fetchAll();
           $this->view->movies = $moviesArray->toArray();
-          //var_dump($movies->fetchAll());
+          
+          $this->view->data = $this->data;
+          $this->view->attributes = $this->attributes;
     }
 
     public function addAction()
